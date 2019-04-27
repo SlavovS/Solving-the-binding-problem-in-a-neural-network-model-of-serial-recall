@@ -5,7 +5,7 @@ Created on Tue Apr  9 08:31:14 2019
 
 @author: slavi
 """
-# Simulation 1 --> Replicating the Primacy, Recency, Word length effects
+# Simulation 1 --> Replicating the Primacy, Recency, List length effects
 # Botvinick & Plaut, 2006
 
 #  Overall accuracy for lists of six nonconfusable letters in this data set
@@ -72,7 +72,7 @@ def plot_prim_lstm():
 
  
 
-#  Word length effect
+#  List length effect
 
 def make_input_trial_len(list_len):
     global letters_26
@@ -202,7 +202,7 @@ def plot_prim_rnn():
 
  
 
-#  Word length effect
+#  List length effect
 
 def make_input_trial_len(list_len):
     global letters_26
