@@ -118,7 +118,7 @@ es = EarlyStoppingByAccuracy(
         verbose=1
     )
 mc = ModelCheckpoint(
-        'best_model_bp_intermediate.h5', 
+        'best_model_bp_checkpoint.h5', 
         monitor='val_my_accuracy', 
         mode='max', 
         verbose=1,
