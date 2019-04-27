@@ -120,7 +120,7 @@ es =  EarlyStoppingByAccuracy(
         verbose=1
     )
 mc = ModelCheckpoint(
-        'best_model_sr_CHERNOVA.h5', 
+        'best_model_sr_checkpoint.h5', 
         monitor='val_my_accuracy', 
         mode='max', 
         verbose=1,
