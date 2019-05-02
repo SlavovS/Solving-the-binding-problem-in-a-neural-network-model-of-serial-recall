@@ -10,6 +10,8 @@ sr_model.load_weights("item-sr.weights.h5")
 n_reps = 1000
 results = {}
 
+position = np.zeros([len(Params.tests), Params.test_list_len, n_reps])
+
 for test_pos in range(len(Params.tests)):
     
     for test_item in Params.tests:
@@ -33,10 +35,20 @@ for test_pos in range(len(Params.tests)):
             
             if np.argmax(target[test_pos]) == np.argmax(output[test_pos]):
                 results[test_item][test_pos] += 1
+            
+                position[test_item][test_pos][i] += 1
 
 for test_item in results:
     print("{}:\t\t{}".format(
             test_item, 
             "\t".join(map(str, results[test_item] / float(n_reps)))
+            ))     
+    
+print("----------------------------------------------")
+print("Standard deviations:")
+for test_item in results:            
+    print("{}:\t\t{}".format(
+            test_item, 
+            "\t".join(map(str, np.around([np.std(position[test_item,x]) for x in range(len(Params.tests))],decimals=2)))
             )
         )
