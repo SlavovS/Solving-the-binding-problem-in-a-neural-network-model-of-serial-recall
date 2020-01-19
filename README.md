@@ -5,6 +5,7 @@ and the implementation of the dual model, along with the simulations used in
 the thesis under the supervision of Ivan Vankov, PhD.
 
 Brief desctiption of the project:
+
 Short-term memory (STM) has been regarded as one of the key properties of the human
 cognitive system due to its ubiquitous role in domains such as language comprehension,
 problem-solving, or long-term learning. A key aspect of STM is the problem of serial order.
